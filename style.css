@@ -370,3 +370,36 @@ html, body {
 .opcao p {
     font-size: 14px;
 }
+.lista-servicos {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.servico-box {
+    background: #151515;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+    border: 1px solid #222;
+}
+
+.servico-box h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.informacao {
+    color: #aaa;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.servico-box .btn {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 10px 20px;
+}
