@@ -4,146 +4,59 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#111;
+    background:#0d0d0d;
     color:#fff;
 }
 
-/* Banner */
+/* ===== MENU ===== */
 
-.hero{
-    height:350px;
-    background:url("banner.jpg") center center;
-    background-size:cover;
-    background-repeat:no-repeat;
-}
-
-.overlay{
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
     width:100%;
-    height:100%;
-    background:rgba(0,0,0,.65);
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    text-align:center;
+    padding:18px 8%;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
-.hero-content h1{
-    font-size:70px;
+.logo-nav{
+    font-size:28px;
     font-weight:bold;
+    color:#fff;
 }
 
-.hero-content span{
+.logo-nav span{
     color:#00A3FF;
 }
 
-.hero-content p{
-    margin-top:15px;
-    font-size:24px;
-    color:#eee;
-}
-
-/* Cards */
-
-.cards{
-    max-width:1100px;
-    margin:-70px auto 40px;
-    padding:0 20px;
+.navbar ul{
     display:flex;
-    gap:25px;
-    justify-content:center;
+    list-style:none;
+    gap:35px;
 }
 
-.card{
-    flex:1;
-    max-width:450px;
-    background:#1b1b1b;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
-
-.card h2{
-    margin-bottom:15px;
-}
-
-.card p{
-    color:#d8d8d8;
-    line-height:26px;
-}
-
-button{
-    width:100%;
-    margin-top:20px;
-    padding:16px;
-    border:none;
-    border-radius:12px;
-    background:#009dff;
-    color:#fff;
+.navbar a{
+    color:white;
+    text-decoration:none;
     font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
+    transition:.3s;
 }
 
-button:hover{
-    background:#0085db;
+.navbar a:hover{
+    color:#00A3FF;
 }
 
-/* Informações */
-
-.info{
-    max-width:1100px;
-    margin:0 auto 40px;
-    padding:25px;
-}
-
-.info h2{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.itens{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.itens div{
-    background:#1b1b1b;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-}
-
-/* Celular */
-
-@media(max-width:768px){
+/* ===== BANNER ===== */
 
 .hero{
-height:260px;
-}
-
-.hero-content h1{
-font-size:48px;
-}
-
-.hero-content p{
-font-size:18px;
-}
-
-.cards{
-display:block;
-margin-top:-40px;
-}
-
-.card{
-margin-bottom:20px;
-max-width:100%;
-}
-
-.itens{
-grid-template-columns:1fr;
-}
-
-}
