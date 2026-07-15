@@ -316,3 +316,57 @@ html, body {
     font-size: 16px;
     cursor: pointer;
 }
+.painel {
+    min-height: 100vh;
+    background: #050505;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.painel .logo {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+.painel h1 {
+    margin-bottom: 10px;
+}
+
+.painel p {
+    color: #aaa;
+}
+
+
+.menu-profissional {
+    display: grid;
+    gap: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+
+.opcao {
+    background: #151515;
+    padding: 25px 20px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.opcao:hover {
+    transform: translateY(-5px);
+}
+
+
+.opcao h2 {
+    margin: 10px 0;
+    color: white;
+}
+
+
+.opcao p {
+    font-size: 14px;
+}
