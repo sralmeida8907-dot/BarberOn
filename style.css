@@ -14,6 +14,12 @@ body{
     color:#fff;
 }
 
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
 /* MENU */
 
 .navbar{
@@ -48,12 +54,12 @@ body{
 .navbar a{
     color:#fff;
     text-decoration:none;
-    transition:.3s;
 }
 
 .navbar a:hover{
     color:#0A84FF;
 }
+
 
 /* BANNER */
 
@@ -61,7 +67,7 @@ body{
     min-height:100vh;
     background:
     linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
-    url("banner.jpg") center center/cover no-repeat;
+    url("banner.jpg") center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -89,6 +95,7 @@ body{
     color:#ddd;
 }
 
+
 /* CARDS */
 
 .cards{
@@ -106,17 +113,6 @@ body{
     border-radius:18px;
     padding:35px;
     text-align:center;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#0A84FF;
-}
-
-.icon{
-    font-size:55px;
-    margin-bottom:20px;
 }
 
 .card h2{
@@ -125,9 +121,9 @@ body{
 
 .card p{
     color:#bbb;
-    line-height:1.6;
     margin-bottom:25px;
 }
+
 
 .btn{
     display:inline-block;
@@ -135,16 +131,8 @@ body{
     color:white;
     text-decoration:none;
     padding:14px 35px;
-    border-radius:10px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#006fe0;
-}
-
-/* RECURSOS */
+    border
+    /* RECURSOS */
 
 .recursos{
     padding:80px 20px;
@@ -169,11 +157,6 @@ body{
     padding:30px;
     border-radius:15px;
     border:1px solid #2a2a2a;
-    transition:.3s;
-}
-
-.item:hover{
-    border-color:#0A84FF;
 }
 
 .item h3{
@@ -184,6 +167,7 @@ body{
     color:#bbb;
 }
 
+
 /* RODAPÉ */
 
 footer{
@@ -193,7 +177,184 @@ footer{
     border-top:1px solid #222;
 }
 
-/* CELULAR */
+
+/* LOGIN */
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#050505;
+    padding:20px;
+}
+
+
+.login-box{
+    width:100%;
+    max-width:380px;
+    text-align:center;
+    background:#141414;
+    padding:35px 25px;
+    border-radius:20px;
+}
+
+
+.login-box .logo{
+    width:140px;
+    margin-bottom:20px;
+}
+
+
+.login-box h1{
+    margin-bottom:10px;
+}
+
+
+.login-box p{
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+
+.login-box input{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    background:#222;
+    color:white;
+}
+
+
+/* PAINEL PROFISSIONAL */
+
+.painel{
+    min-height:100vh;
+    background:#050505;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+
+.painel .logo{
+    width:140px;
+}
+
+
+.menu-profissional{
+    display:grid;
+    gap:20px;
+    max-width:400px;
+    margin:30px auto;
+}
+
+
+.opcao{
+    background:#151515;
+    padding:25px 20px;
+    border-radius:20px;
+    border:1px solid #222;
+    cursor:pointer;
+}
+
+
+.opcao h2{
+    margin:10px 0;
+}
+
+
+.opcao p{
+    color:#aaa;
+    font-size:14px;
+}
+
+
+/* SERVIÇOS */
+
+.pagina{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+
+.lista-servicos{
+    width:100%;
+    max-width:500px;
+    margin:30px auto;
+}
+
+
+.servico-box{
+    background:#151515;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:15px;
+    text-align:left;
+    border:1px solid #222;
+}
+
+
+.servico-box h2{
+    margin-bottom:15px;
+}
+
+
+.servico-box p{
+    color:#ccc;
+    margin:8px 0;
+}
+    /* ADICIONAR SERVIÇO */
+
+.tela-central{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+
+.formulario-servico{
+    width:100%;
+    max-width:400px;
+    background:#151515;
+    padding:35px 25px;
+    border-radius:20px;
+    text-align:center;
+}
+
+
+.formulario-servico .logo{
+    width:140px;
+    margin-bottom:20px;
+}
+
+
+.formulario-servico input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    background:#222;
+    color:white;
+}
+
+
+
+/* AJUSTES NOTEBOOK E CELULAR */
 
 @media(max-width:768px){
 
@@ -202,204 +363,59 @@ footer{
     gap:15px;
 }
 
+
 .navbar ul{
     gap:20px;
 }
+
 
 .hero h1{
     font-size:34px;
 }
 
+
 .hero p{
     font-size:18px;
 }
+
 
 .logo{
     width:240px;
 }
 
-.cards{
-    padding:50px 15px;
-}
 
 .card{
     width:100%;
 }
+
 
 .recursos h2{
     font-size:30px;
 }
 
 }
-html, body {
-    overflow-x: hidden;
-}
 
-img {
-    max-width: 100%;
-    height: auto;
-}
 
-.hero {
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-}
+@media(max-width:500px){
 
-.cards {
-    width: 100%;
-}
-
-.card {
-    max-width: 350px;
-}
-html, body {
-    overflow-x: hidden;
-}
-
-* {
-    max-width: 100%;
-}
-.login-page {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #050505;
-    padding: 20px;
-}
-
-.login-box {
-    width: 100%;
-    max-width: 380px;
-    text-align: center;
-    background: rgba(20,20,20,0.95);
-    padding: 35px 25px;
-    border-radius: 20px;
-}
-
-.login-box .logo {
-    width: 140px;
-    margin-bottom: 20px;
-}
-
-.login-box h1 {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.login-box p {
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-.login-box input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background: #222;
-    color: white;
-}
-
-.login-box .btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: none;
-    background: #1da1f2;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-.painel {
-    min-height: 100vh;
-    background: #050505;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.painel .logo {
-    width: 140px;
-    margin-bottom: 20px;
-}
-
-.painel h1 {
-    margin-bottom: 10px;
-}
-
-.painel p {
-    color: #aaa;
+.navbar ul{
+    flex-direction:column;
+    text-align:center;
 }
 
 
-.menu-profissional {
-    display: grid;
-    gap: 20px;
-    max-width: 400px;
-    margin: 30px auto;
+.hero{
+    padding-top:150px;
 }
 
 
-.opcao {
-    background: #151515;
-    padding: 25px 20px;
-    border-radius: 20px;
-    border: 1px solid #222;
-    cursor: pointer;
-    transition: 0.3s;
+.btn{
+    width:100%;
 }
 
 
-.opcao:hover {
-    transform: translateY(-5px);
+.servico-box{
+    text-align:center;
 }
 
-
-.opcao h2 {
-    margin: 10px 0;
-    color: white;
-}
-
-
-.opcao p {
-    font-size: 14px;
-}
-.lista-servicos {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-.servico-box {
-    background: #151515;
-    border-radius: 18px;
-    padding: 20px;
-    margin-bottom: 15px;
-    text-align: left;
-    border: 1px solid #222;
-}
-
-.servico-box h2 {
-    color: white;
-    margin-bottom: 15px;
-}
-
-.informacao {
-    color: #aaa;
-    margin: 8px 0;
-    font-size: 16px;
-}
-
-.servico-box .btn {
-    width: auto;
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 15px;
-    padding: 10px 20px;
 }
