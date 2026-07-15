@@ -231,3 +231,25 @@ footer{
 }
 
 }
+html, body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.cards {
+    width: 100%;
+}
+
+.card {
+    max-width: 350px;
+}
