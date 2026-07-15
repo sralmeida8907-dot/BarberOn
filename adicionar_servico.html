@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Serviços - BarberOn</title>
+<title>Adicionar Serviço - BarberOn</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,81 +18,64 @@
 
 <img src="logo.png" class="logo">
 
-<h1>Serviços ✂️</h1>
+<h1>Novo Serviço ✂️</h1>
 
-<p>Organize os serviços da sua barbearia.</p>
-
-
-<a href="adicionar_servico.html" class="btn">
-+ Adicionar Serviço
-</a>
+<p>Cadastre um serviço da sua barbearia.</p>
 
 
-<h2 style="margin-top:30px;">
-Lista de Serviços
-</h2>
+<div class="login-box">
+
+<input id="nome" type="text" placeholder="Nome do serviço">
+
+<input id="valor" type="text" placeholder="Valor (ex: R$ 30)">
+
+<input id="tempo" type="text" placeholder="Duração (ex: 30 minutos)">
 
 
-<div id="listaServicos" class="lista-servicos">
+<button class="btn" id="salvar">
+Salvar Serviço
+</button>
+
 
 </div>
 
-
 </div>
-
 
 
 <script>
 
-let lista = document.getElementById("listaServicos");
+document.getElementById("salvar").onclick = function(){
+
+let nome = document.getElementById("nome").value;
+let valor = document.getElementById("valor").value;
+let tempo = document.getElementById("tempo").value;
+
+
+if(nome == "" || valor == "" || tempo == ""){
+alert("Preencha todos os campos");
+return;
+}
+
 
 let servicos = JSON.parse(localStorage.getItem("servicos")) || [];
 
 
-if(servicos.length === 0){
-
-lista.innerHTML = `
-<div class="servico-box">
-<h2>Nenhum serviço cadastrado</h2>
-<p>Adicione seu primeiro serviço.</p>
-</div>
-`;
-
-}
-
-
-servicos.forEach(function(servico){
-
-lista.innerHTML += `
-
-<div class="servico-box">
-
-<h2>${servico.nome}</h2>
-
-<div class="informacao">
-Valor: ${servico.valor}
-</div>
-
-<div class="informacao">
-Duração: ${servico.duracao}
-</div>
-
-
-<button class="btn">
-Editar
-</button>
-
-<button class="btn">
-Excluir
-</button>
-
-
-</div>
-
-`;
-
+servicos.push({
+nome: nome,
+valor: valor,
+tempo: tempo
 });
 
+
+localStorage.setItem("servicos", JSON.stringify(servicos));
+
+
+alert("Serviço salvo!");
+
+
+window.location.href = "servicos.html";
+
+};
 
 </script>
 
