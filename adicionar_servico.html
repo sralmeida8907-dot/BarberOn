@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adicionar Serviço - BarberOn</title>
+<title>Serviços - BarberOn</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -18,32 +18,83 @@
 
 <img src="logo.png" class="logo">
 
-<h1>Novo Serviço ✂️</h1>
+<h1>Serviços ✂️</h1>
 
-<p>Cadastre um serviço da sua barbearia.</p>
-
-
-<div class="login-box">
+<p>Organize os serviços da sua barbearia.</p>
 
 
-<input type="text" placeholder="Nome do serviço">
+<a href="adicionar_servico.html" class="btn">
++ Adicionar Serviço
+</a>
 
 
-<input type="text" placeholder="Valor do serviço (ex: R$ 30)">
+<h2 style="margin-top:30px;">
+Lista de Serviços
+</h2>
 
 
-<input type="text" placeholder="Duração (ex: 30 minutos ou 1 hora)">
+<div id="listaServicos" class="lista-servicos">
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+let lista = document.getElementById("listaServicos");
+
+let servicos = JSON.parse(localStorage.getItem("servicos")) || [];
+
+
+if(servicos.length === 0){
+
+lista.innerHTML = `
+<div class="servico-box">
+<h2>Nenhum serviço cadastrado</h2>
+<p>Adicione seu primeiro serviço.</p>
+</div>
+`;
+
+}
+
+
+servicos.forEach(function(servico){
+
+lista.innerHTML += `
+
+<div class="servico-box">
+
+<h2>${servico.nome}</h2>
+
+<div class="informacao">
+Valor: ${servico.valor}
+</div>
+
+<div class="informacao">
+Duração: ${servico.duracao}
+</div>
 
 
 <button class="btn">
-Salvar Serviço
+Editar
+</button>
+
+<button class="btn">
+Excluir
 </button>
 
 
 </div>
 
+`;
 
-</div>
+});
+
+
+</script>
 
 
 </body>
