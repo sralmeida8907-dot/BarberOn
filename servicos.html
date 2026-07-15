@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adicionar Serviço - BarberOn</title>
+<title>Serviços - BarberOn</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,36 +14,80 @@
 
 <body>
 
-<div class="painel">
+<div class="pagina">
 
 <img src="logo.png" class="logo">
 
-<h1>Novo Serviço ✂️</h1>
+<h1>Serviços ✂️</h1>
 
-<p>Cadastre um serviço da sua barbearia.</p>
-
-
-<div class="login-box">
+<p>Gerencie os serviços da sua barbearia.</p>
 
 
-<input type="text" placeholder="Nome do serviço">
+<a href="adicionar_servico.html" class="btn">
++ Adicionar Serviço
+</a>
 
 
-<input type="number" placeholder="Valor do serviço">
+<h2 class="titulo-lista">Lista de Serviços</h2>
 
 
-<input type="number" placeholder="Duração em minutos">
+<div id="listaServicos">
 
 
-<button class="btn">
-Salvar Serviço
-</button>
+<div class="servico-box">
 
+<h2>Corte Masculino</h2>
+
+<p>Valor: R$ 30</p>
+
+<p>Duração: 40 minutos</p>
+
+</div>
+
+
+<div class="servico-box">
+
+<h2>Barba</h2>
+
+<p>Valor: R$ 20</p>
+
+<p>Duração: 30 minutos</p>
 
 </div>
 
 
 </div>
+
+
+</div>
+
+
+<script>
+
+let lista = JSON.parse(localStorage.getItem("servicos")) || [];
+
+let area = document.getElementById("listaServicos");
+
+
+lista.forEach(function(servico){
+
+area.innerHTML += `
+
+<div class="servico-box">
+
+<h2>${servico.nome}</h2>
+
+<p>Valor: ${servico.valor}</p>
+
+<p>Duração: ${servico.duracao}</p>
+
+</div>
+
+`;
+
+});
+
+</script>
 
 
 </body>
