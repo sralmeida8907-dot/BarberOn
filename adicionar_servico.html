@@ -14,7 +14,9 @@
 
 <body>
 
-<div class="painel">
+<div class="tela-central">
+
+<div class="formulario-servico">
 
 <img src="logo.png" class="logo">
 
@@ -23,16 +25,14 @@
 <p>Cadastre um serviço da sua barbearia.</p>
 
 
-<div class="login-box">
-
 <input id="nomeServico" type="text" placeholder="Nome do serviço">
 
-<input id="valorServico" type="text" placeholder="Valor do serviço (ex: R$ 30)">
+<input id="valorServico" type="text" placeholder="Valor do serviço">
 
-<input id="duracaoServico" type="text" placeholder="Duração (ex: 30 minutos ou 1 hora)">
+<input id="duracaoServico" type="text" placeholder="Duração (ex: 40 minutos)">
 
 
-<button class="btn" onclick="salvarServico()">
+<button type="button" class="btn" onclick="salvarServico()">
 Salvar Serviço
 </button>
 
@@ -52,11 +52,8 @@ let duracao = document.getElementById("duracaoServico").value;
 
 
 if(nome === "" || valor === "" || duracao === ""){
-
 alert("Preencha todos os campos");
-
 return;
-
 }
 
 
@@ -64,11 +61,9 @@ let servicos = JSON.parse(localStorage.getItem("servicos")) || [];
 
 
 servicos.push({
-
 nome: nome,
 valor: valor,
 duracao: duracao
-
 });
 
 
@@ -78,8 +73,7 @@ localStorage.setItem("servicos", JSON.stringify(servicos));
 alert("Serviço salvo com sucesso!");
 
 
-window.location.assign("servicos.html");
-
+window.location.replace("servicos.html");
 
 }
 
