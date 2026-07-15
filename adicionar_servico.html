@@ -25,14 +25,14 @@
 
 <div class="login-box">
 
-<input id="nome" type="text" placeholder="Nome do serviço">
+<input id="nomeServico" type="text" placeholder="Nome do serviço">
 
-<input id="valor" type="text" placeholder="Valor (ex: R$ 30)">
+<input id="valorServico" type="text" placeholder="Valor do serviço (ex: R$ 30)">
 
-<input id="tempo" type="text" placeholder="Duração (ex: 30 minutos)">
+<input id="duracaoServico" type="text" placeholder="Duração (ex: 30 minutos ou 1 hora)">
 
 
-<button class="btn" id="salvar">
+<button class="btn" onclick="salvarServico()">
 Salvar Serviço
 </button>
 
@@ -44,16 +44,19 @@ Salvar Serviço
 
 <script>
 
-document.getElementById("salvar").onclick = function(){
+function salvarServico(){
 
-let nome = document.getElementById("nome").value;
-let valor = document.getElementById("valor").value;
-let tempo = document.getElementById("tempo").value;
+let nome = document.getElementById("nomeServico").value;
+let valor = document.getElementById("valorServico").value;
+let duracao = document.getElementById("duracaoServico").value;
 
 
-if(nome == "" || valor == "" || tempo == ""){
+if(nome === "" || valor === "" || duracao === ""){
+
 alert("Preencha todos os campos");
+
 return;
+
 }
 
 
@@ -61,21 +64,24 @@ let servicos = JSON.parse(localStorage.getItem("servicos")) || [];
 
 
 servicos.push({
+
 nome: nome,
 valor: valor,
-tempo: tempo
+duracao: duracao
+
 });
 
 
 localStorage.setItem("servicos", JSON.stringify(servicos));
 
 
-alert("Serviço salvo!");
+alert("Serviço salvo com sucesso!");
 
 
-window.location.href = "./servicos.html";
+window.location.assign("servicos.html");
 
-};
+
+}
 
 </script>
 
