@@ -1,81 +1,108 @@
 body{
-margin:0;
-padding:0;
-font-family:Arial, Helvetica, sans-serif;
-background:url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1600&auto=format&fit=crop") center center;
-background-size:cover;
-color:white;
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1600&auto=format&fit=crop") center center no-repeat;
+    background-size:cover;
+    color:#fff;
 }
 
 .overlay{
-background:rgba(0,0,0,.75);
-min-height:100vh;
-padding:30px 20px;
+    background:rgba(0,0,0,.75);
+    min-height:100vh;
+    padding:30px 20px;
 }
 
 .container{
-max-width:420px;
-margin:auto;
+    max-width:420px;
+    margin:auto;
 }
 
 h1{
-text-align:center;
-font-size:42px;
-color:#00A3FF;
-margin-bottom:10px;
+    text-align:center;
+    font-size:48px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.barber{
+    color:#FFFFFF;
+}
+
+.on{
+    color:#00A3FF;
 }
 
 .subtitulo{
-text-align:center;
-font-size:22px;
-font-weight:bold;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
 .descricao{
-text-align:center;
-color:#ddd;
-margin-bottom:30px;
+    text-align:center;
+    color:#d9d9d9;
+    margin-bottom:30px;
+    font-size:16px;
 }
 
 .card{
-background:#1b1b1b;
-border-radius:18px;
-padding:20px;
-margin-bottom:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.4);
+    background:#1b1b1b;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
 }
 
 .card h2{
-margin-top:0;
+    margin-top:0;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#d5d5d5;
+    line-height:1.5;
 }
 
 button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:12px;
-background:#00A3FF;
-color:white;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-margin-top:15px;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#00A3FF;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
 }
 
 button:hover{
-background:#0087d6;
+    background:#0088dd;
 }
 
 .info{
-background:#1b1b1b;
-padding:20px;
-border-radius:18px;
+    background:#1b1b1b;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+.info h3{
+    margin-top:0;
 }
 
 .info ul{
-padding-left:20px;
+    padding-left:20px;
 }
 
 .info li{
-margin:12px 0;
+    margin:12px 0;
+    color:#d5d5d5;
 }
