@@ -14,49 +14,220 @@ body{
     color:#fff;
 }
 
-/* ===== MENU ===== */
+/* MENU */
 
 .navbar{
     position:fixed;
     top:0;
     left:0;
     width:100%;
+    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
-    background:rgba(0,0,0,.55);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(8px);
+    z-index:999;
 }
 
 .logo-nav{
-    font-size:28px;
+    font-size:32px;
     font-weight:bold;
-    color:#fff;
 }
 
 .logo-nav span{
-    color:#00A3FF;
+    color:#0A84FF;
 }
 
 .navbar ul{
     display:flex;
     list-style:none;
-    gap:35px;
+    gap:30px;
 }
 
 .navbar a{
-    color:white;
+    color:#fff;
     text-decoration:none;
-    font-size:17px;
     transition:.3s;
 }
 
 .navbar a:hover{
-    color:#00A3FF;
+    color:#0A84FF;
 }
 
-/* ===== BANNER ===== */
+/* BANNER */
 
 .hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("banner.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+}
+
+.overlay{
+    max-width:900px;
+}
+
+.logo{
+    width:340px;
+    max-width:90%;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#ddd;
+}
+
+/* CARDS */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    padding:70px 20px;
+}
+
+.card{
+    width:360px;
+    background:#171717;
+    border:1px solid #2a2a2a;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#0A84FF;
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#bbb;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0A84FF;
+    color:white;
+    text-decoration:none;
+    padding:14px 35px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#006fe0;
+}
+
+/* RECURSOS */
+
+.recursos{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.recursos h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.item{
+    background:#171717;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #2a2a2a;
+    transition:.3s;
+}
+
+.item:hover{
+    border-color:#0A84FF;
+}
+
+.item h3{
+    margin:15px 0;
+}
+
+.item p{
+    color:#bbb;
+}
+
+/* RODAPÉ */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#888;
+    border-top:1px solid #222;
+}
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.navbar ul{
+    gap:20px;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.logo{
+    width:240px;
+}
+
+.cards{
+    padding:50px 15px;
+}
+
+.card{
+    width:100%;
+}
+
+.recursos h2{
+    font-size:30px;
+}
+
+}
